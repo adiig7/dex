@@ -40,3 +40,21 @@
     background-color: #e4e4e4;
     cursor: pointer;
 }
+
+.wallet--btn {
+    text-decoration: none;
+    height: 2.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1em;
+    background: linear-gradient(90.41deg, #a663cc 1.14%, #013a63 100%);
+    color: #fff;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-left: 8rem;
+    cursor: pointer;
+}
+
+.wallet--btn:hover {
+    background: linear-gradient(90.41deg, #013a63 1.14%, #a663cc 100%);
+}

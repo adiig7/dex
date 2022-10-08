@@ -78,6 +78,18 @@ body{
     cursor: pointer;
 }
 
+.modal .modal-dialog .modal-content{  background-color: #D9C48B; }
+
+#from_token_text{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+ #to_token_text{
+    font-size: 22px;
+    font-weight: bold;
+ }
+
 .wallet--btn {
     width: 249px;
     height: 64px;
@@ -112,6 +124,7 @@ body{
 }
 
 .inputCoin{
+    height: 40px;
     border-radius: 20px;
 }
 

@@ -14,56 +14,64 @@
     <link rel="stylesheet" href="./style.css">
   </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar_gradient">
-        <img class="image-style" src="./tsuki.png" alt="">
-        <ul class="navbar-nav ml-auto">
+    <nav class="navbar navbar-expand-lg width-extend">
+        <ul class="navbar-nav ml-auto navboot">
           <li class="nav-item">
-            <button id="login_button" class="wallet--btn shadowOutline" type="submit">Connect Wallet</button>
+            <button class="swapButton" id="connectButton" type="submit">Connect Wallet</button>
           </li>
     </nav>
 
-      <div class="bgContainer">
       <div class ="container">
         <div class="row">
-            <div class="col col-md-6 offset-md-3 mainDiv" id="window">
-                <h4 class="headingDes">Tsuki Swap</h4>
-                <div id="form">
-                    <div class="swapbox">
-                        <div class="swapbox_select token_select" id="from_token_select">
-                            <img class="token_img" id="from_token_img">
-                            <span id="from_token_text"></span>
-                        </div>
-                        <div class="swapbox_select">
-                            <input class="number form-control inputCoin" placeholder="amount" id="from_amount">
-                        </div>
-                    </div>
-                    <div class="swapbox">
-                        <div class="swapbox_select token_select" id="to_token_select">
-                            <img class="token_img" id="to_token_img">
-                            <span id="to_token_text"></span>
-                        </div>
-                         <div class="swapbox_select">
-                            <input class="number form-control inputCoin" placeholder="amount" id="to_amount">
-                        </div>
-                    </div>  
-                    <div class="gas_estimate_label estimateGasDesign">Estimated Gas: <span id="gas_estimate"></span></div>
-                    <button disabled class="swapButton--design shadow" id="swap_button">Swap</button>                
-                </div>
+          <div class="wrapper center">
+            <div class="swap">
+              <img src="./swap.png" />
+            </div>
+            <div class="tsukiLogo">
+              <img src = "./tsuki.png" />
+            </div>
+
+
+            <div class="swapTokenInput">
+              
+              <div class="leftInputDiv">
+                <span class="prefix">$</span>
+                <input class="leftInput" type="number" id="from_amount"/>
+                <img class="token_img" id="from_token_img">
+                <span id="from_token_text">COIN</span>
+              </div>
+              
+              <div class="arrowImage">
+                  <img src="./Vector.png" />
+              </div>
+              <div class="rightInputDiv">
+                    <span class="prefix">$</span>
+                    <input class="rightInput" type="number" id="to_amount"/> 
+                     <img class="token_img" id="to_token_img">
+                <span id="to_token_text">COIN</span>
+              </div>
+  
+            </div>
+
+            <div class="gasText">
+              ESTIMATED GAS
+            </div>
+            <div class="output">
+              <span id="gas_estimate"></span>
+            </div>
+            <div class="buttonDiv">
+              <button class="swapButton" id="swap_button">SWAP</button>
             </div>
         </div>
+      </div>
     </div>
-    </div>
 
 
-
-
-
-
-    <div class="modal" id="token_modal" tabindex="-1" role="dialog">
+    <div class="modal" id="token_modal" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Select a Token</h5>
+            <h5 class="modal-title select-token-text shadowOutline">Select a Token</h5>
             <button id="modal_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

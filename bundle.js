@@ -67,11 +67,11 @@ async function connect() {
         } catch (error) {
             console.log(error);
         }
-        document.getElementById("login_button").innerHTML = "Connected";
+        document.getElementById("connectButton").innerHTML = "Connected";
         // const accounts = await ethereum.request({ method: "eth_accounts" });
         document.getElementById("swap_button").disabled = false;
     } else {
-        document.getElementById("login_button").innerHTML = "Please install MetaMask";
+        document.getElementById("connectButton").innerHTML = "Please install MetaMask";
     }
 }
 
@@ -173,11 +173,11 @@ async function trySwap(){
 
 init();
 
-document.getElementById("login_button").onclick = connect;
-document.getElementById("from_token_select").onclick = () => {
+document.getElementById("connectButton").onclick = connect;
+document.getElementById("from_token_text").onclick = () => {
     openModal("from");
 };
-document.getElementById("to_token_select").onclick = () => {
+document.getElementById("to_token_text").onclick = () => {
     openModal("to");
 };
 document.getElementById("modal_close").onclick = closeModal;
